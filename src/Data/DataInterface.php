@@ -5,8 +5,6 @@
 */
 interface DataInterface
 {
-    public function getMimeType();
-
     public function getData();
 
     public function getRaw();
