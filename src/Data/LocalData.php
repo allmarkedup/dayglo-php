@@ -53,7 +53,7 @@ class LocalData implements DataInterface
 
     public function getExtension()
     {
-        return pathinfo($this->path, PATHINFO_EXTENSION);
+        return strtolower(pathinfo($this->path, PATHINFO_EXTENSION));
     }
 
 }

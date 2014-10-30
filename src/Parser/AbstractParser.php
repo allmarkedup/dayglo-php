@@ -9,6 +9,8 @@ abstract class AbstractParser
 
     public function getSupportedExtensions()
     {
-        return static::$supportedExtensions;
+        return array_map(function($ext){
+            return strtolower($ext);
+        }, static::$supportedExtensions);
     }
 }
