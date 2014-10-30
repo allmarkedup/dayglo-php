@@ -2,7 +2,6 @@
 
 use Amu\Dayglo\Data\DataInterface;
 use Amu\Dayglo\Parser\ParserInterface;
-use Dflydev\ApacheMimeTypes\PhpRepository as Mimes;
 
 /**
 *  Data file object class
@@ -21,11 +20,6 @@ class LocalData implements DataInterface
     {
         $this->path = $path;
         $this->parser = $parser;
-    }
-
-    public function getPath()
-    {
-        return $this->path;
     }
 
     public function setParser(ParserInterface $parser = null)
@@ -52,14 +46,14 @@ class LocalData implements DataInterface
         return $this->raw;
     }
 
-    public function getMimeType()
+    public function getPath()
     {
-        $mimes = new Mimes();
-        $extension = pathinfo($this->path, PATHINFO_EXTENSION);
-        if ($extension === 'php') {
-            return 'application/x-php';
-        }
-        return $mimes->findType($extension);
+        return $this->path;
+    }
+
+    public function getExtension()
+    {
+        return pathinfo($this->path, PATHINFO_EXTENSION);
     }
 
 }

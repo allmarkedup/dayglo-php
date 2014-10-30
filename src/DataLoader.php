@@ -30,7 +30,7 @@ class DataLoader {
         if (file_exists($path)) {
             if (is_file($path)) {
                 $file = new LocalData($path);
-                if ($parser = $this->parsers->getParserForMime($file->getMimeType())) {
+                if ($parser = $this->parsers->getParser($file)) {
                     $file->setParser($parser);
                     return $file;    
                 }

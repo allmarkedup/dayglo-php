@@ -5,10 +5,10 @@
 */
 abstract class AbstractParser
 {
-    protected static $supportedMimes = [];
+    protected static $supportedExtensions = [];
 
-    public function getSupportedMimes()
+    public function getSupportedExtensions()
     {
-        return static::$supportedMimes;
+        return static::$supportedExtensions;
     }
 }

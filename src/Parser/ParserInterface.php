@@ -7,5 +7,5 @@ interface ParserInterface
 {
     public function parse($contents);
 
-    public function getSupportedMimes();
+    public function getSupportedExtensions();
 }

@@ -7,7 +7,7 @@ class JsonParser extends AbstractParser implements ParserInterface
 {
     protected $toArray;
 
-    protected static $supportedMimes = ['application/json'];
+    protected static $supportedExtensions = ['json'];
 
     public function __construct($toArray = true)
     {

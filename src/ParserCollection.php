@@ -1,5 +1,6 @@
 <?php namespace Amu\Dayglo;
 
+use Amu\Dayglo\Data\DataInterface;
 use Amu\Dayglo\Parser\ParserInterface;
 
 /**
@@ -18,13 +19,17 @@ class ParserCollection
     {
         $this->parsers[] = $parser;
     }
-    
-    public function getParserForMime($mime)
+
+    public function getParser(DataInterface $data)
     {
-        foreach($this->parsers as $parser)
-        {
-            $mimes = $parser->getSupportedMimes();
-            if (in_array($mime, $mimes)) {
+        return $this->getParserForExtension($data->getExtension());
+    }
+
+    public function getParserForExtension($extension)
+    {
+        foreach($this->parsers as $parser) {
+            $extensions = $parser->getSupportedExtensions();
+            if (in_array($extension, $extensions)) {
                 return $parser;
             }
         }

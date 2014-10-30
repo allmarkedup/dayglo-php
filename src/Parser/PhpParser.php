@@ -5,7 +5,7 @@
 */
 class PhpParser extends AbstractParser implements ParserInterface
 {
-    protected static $supportedMimes = ['application/x-php'];
+    protected static $supportedExtensions = ['php'];
 
     public function parse($content)
     {
