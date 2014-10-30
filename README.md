@@ -16,8 +16,9 @@ $ composer require allmarkedup/dayglo
 ```php
 
 <?php
+
 use Amu\Dayglo\Parser;
-use Amu\Dayglo\DataLoader;
+use Amu\Dayglo\Loader;
 use Amu\Dayglo\ParserCollection;
 
 // Create collection with the parsers required
@@ -26,7 +27,7 @@ $parsers = new ParserCollection([
     new Parser\YamlParser()
 ]);
 
-$loader = new DataLoader($parsers, __DIR__ . '/data');
+$loader = new Loader($parsers, __DIR__ . '/data');
 
 // load and parse data from a JSON file
 $file = $loader->fetch('example.json');

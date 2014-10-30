@@ -7,7 +7,7 @@ use Amu\Dayglo\Exception\FileNotFoundException;
 use Amu\Dayglo\Exception\NotSupportedException;
 use Amu\Dayglo\Exception\NoMatchingParserException;
 
-class DataLoader {
+class Loader {
 
     protected $basePath;
 
