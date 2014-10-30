@@ -1,5 +1,5 @@
 /vendor
-/composer.lock
+composer.lock
 /node_modules
 /example
 npm-debug.log
