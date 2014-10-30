@@ -1,5 +1,5 @@
-<?php namespace Clearleft\Dayglo\Exception;
+<?php namespace Amu\Dayglo\Exception;
 
-use Clearleft\Dayglo\Exception\Exception;
+use Amu\Dayglo\Exception\Exception;
 
 class NotSupportedException extends Exception {}

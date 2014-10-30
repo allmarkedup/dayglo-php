@@ -1,12 +1,14 @@
-<?php namespace Clearleft\Dayglo\Parser;
+<?php namespace Amu\Dayglo\Parser;
 
 /**
 *  PHP Parsing class
 */
 class PhpParser extends AbstractParser implements ParserInterface
 {
-    function __construct()
+    protected static $supportedMimes = ['application/x-php'];
+
+    public function parse($content)
     {
-               
+        return eval(str_replace(['<?php', '<?', '?>'], '', $content));
     }
 }

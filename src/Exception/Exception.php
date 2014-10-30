@@ -1,3 +1,3 @@
-<?php namespace Clearleft\Dayglo\Exception;
+<?php namespace Amu\Dayglo\Exception;
 
 class Exception extends \Exception {}

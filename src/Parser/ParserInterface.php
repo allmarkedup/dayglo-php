@@ -1,4 +1,4 @@
-<?php namespace Clearleft\Dayglo\Parser;
+<?php namespace Amu\Dayglo\Parser;
 
 /**
 *  Parser interface
@@ -6,4 +6,6 @@
 interface ParserInterface
 {
     public function parse($contents);
+
+    public function getSupportedMimes();
 }

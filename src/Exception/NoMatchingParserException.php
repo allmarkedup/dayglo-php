@@ -2,4 +2,4 @@
 
 use Amu\Dayglo\Exception\Exception;
 
-class FileNotFoundException extends Exception {}
+class NoMatchingParserException extends Exception {}

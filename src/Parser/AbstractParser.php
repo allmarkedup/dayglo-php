@@ -1,11 +1,11 @@
-<?php namespace Clearleft\Dayglo\Parser;
+<?php namespace Amu\Dayglo\Parser;
 
 /**
 *  Abstract base parser class
 */
 abstract class AbstractParser
 {
-    public static $supportedMimes = [];
+    protected static $supportedMimes = [];
 
     public function getSupportedMimes()
     {
