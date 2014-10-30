@@ -1,0 +1,18 @@
+{
+  "name": "dayglo",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:clearleft/dayglo.git"
+  },
+  "author": "Mark Perkins <mark@clearleft.com>",
+  "bugs": {
+    "url": "https://github.com/clearleft/dayglo/issues"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-phpunit": "^0.3.6",
+    "load-grunt-tasks": "^1.0.0"
+  }
+}

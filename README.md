@@ -1,4 +1,4 @@
-dayglo
-======
+Dayglo
+=======
 
-PHP filesystem data loader
+A PHP data loader.
