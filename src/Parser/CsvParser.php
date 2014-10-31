@@ -16,7 +16,7 @@ class CsvParser extends AbstractParser implements ParserInterface
 
     protected $escapeChar = '\\';
 
-    protected $flags = SplFileObject::READ_AHEAD|SplFileObject::SKIP_EMPTY;
+    protected $flags;
 
     protected $hasHeader = false;
 
@@ -27,6 +27,8 @@ class CsvParser extends AbstractParser implements ParserInterface
         if (isset($params['escape'])) $this->escapeChar = $params['escape'];
         if (isset($params['flags'])) $this->flags = $params['flags'];
         if (isset($params['header'])) $this->hasHeader = true;
+
+        $this->flags = isset($params['flags']) ? $params['flags'] : SplFileObject::READ_AHEAD|SplFileObject::SKIP_EMPTY;
     }
 
     public function parse($content)
