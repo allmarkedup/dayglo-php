@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:clearleft/dayglo.git"
+    "url": "git@github.com:allmarkedup/dayglo.git"
   },
-  "author": "Mark Perkins <mark@clearleft.com>",
+  "author": "Mark Perkins <mark@allmarkedup.com>",
   "bugs": {
-    "url": "https://github.com/clearleft/dayglo/issues"
+    "url": "https://github.com/allmarkedup/dayglo/issues"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
