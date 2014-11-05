@@ -1,42 +1,14 @@
 <?php namespace Amu\Dayglo\Data;
 
 use Amu\Dayglo\Data\DataInterface;
-use Amu\Dayglo\Parser\ParserInterface;
+use Amu\Dayglo\Data\AbstractData;
 
 /**
 *  Data file object class
 */
-class LocalData implements DataInterface
+class LocalData extends AbstractData implements DataInterface
 {
     protected $path;
-
-    protected $parser;
-
-    protected $raw = null;
-
-    protected $data = null;
-
-    function __construct($path, ParserInterface $parser = null)
-    {
-        $this->path = $path;
-        $this->parser = $parser;
-    }
-
-    public function setParser(ParserInterface $parser = null)
-    {
-        $this->parser = $parser;
-    }
-
-    public function getData()
-    {
-        if ( is_null($this->data) ) {
-            if ( ! $this->parser ) {
-                throw new \LogicException('A parser must be set before the file contents can be parsed');
-            }
-            $this->data = $this->parser->parse($this->getRaw());
-        }
-        return $this->data;
-    }
 
     public function getRaw()
     {
