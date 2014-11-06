@@ -3,7 +3,7 @@
 use Amu\Dayglo\Data\DataInterface;
 use Amu\Dayglo\Parser\ParserInterface;
 
-abstract class AbstractData implements DataInterface, \IteratorAggregate, \ArrayAccess
+abstract class AbstractData implements DataInterface, \IteratorAggregate, \ArrayAccess, \JsonSerializable
 {
     protected $parser;
 
@@ -66,5 +66,10 @@ abstract class AbstractData implements DataInterface, \IteratorAggregate, \Array
     {
         $data = $this->getData();
         return isset($data[$offset]) ? $data[$offset] : null;
+    }
+
+    public function jsonSerialize()
+    {
+        return $this->getData();
     }
 }
