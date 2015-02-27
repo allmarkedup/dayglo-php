@@ -33,6 +33,17 @@ abstract class AbstractData implements DataInterface, \IteratorAggregate, \Array
         return $this->data;
     }
 
+    public function setData(array $data)
+    {
+        $this->data = $data;
+        $this->raw = $this->parser->encode($this->data);
+    }
+
+    public function write()
+    {
+        return file_put_contents($this->path, $this->raw);
+    }
+
     abstract public function getRaw();
 
     public function getIterator()

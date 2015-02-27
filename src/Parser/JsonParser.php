@@ -18,5 +18,10 @@ class JsonParser extends AbstractParser implements ParserInterface
     {
         return json_decode($content, $this->toArray);
     }
+
+    public function encode(array $content)
+    {
+        return json_encode($content, JSON_PRETTY_PRINT);
+    }
     
 }

@@ -13,4 +13,9 @@ class YamlParser extends AbstractParser implements ParserInterface
     {
         return Spyc::YAMLLoadString($content);
     }
+
+    public function encode(array $content)
+    {
+        return Spyc::YAMLDump($content);
+    }
 }

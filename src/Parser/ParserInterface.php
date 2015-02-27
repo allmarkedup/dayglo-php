@@ -7,5 +7,7 @@ interface ParserInterface
 {
     public function parse($contents);
 
+    public function encode(array $content);
+
     public function getSupportedExtensions();
 }
