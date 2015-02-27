@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "symfony/yaml": "~2.5",
+        "mustangostang/spyc": "0.5.*",
         "jamesmoss/toml": "~1.1",
         "league/csv": "~6.0"
     },

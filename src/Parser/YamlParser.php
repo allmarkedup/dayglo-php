@@ -1,6 +1,6 @@
 <?php namespace Amu\Dayglo\Parser;
 
-use Symfony\Component\Yaml\Yaml;
+use Spyc;
 
 /**
 *  YAML Parsing class
@@ -11,6 +11,6 @@ class YamlParser extends AbstractParser implements ParserInterface
 
     public function parse($content)
     {
-        return Yaml::parse($content);
+        return Spyc::YAMLLoadString($content);
     }
 }
