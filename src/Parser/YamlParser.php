@@ -30,6 +30,8 @@ class YamlParser extends AbstractParser implements ParserInterface
 
     public function encode(array $content)
     {
-        return Spyc::YAMLDump($content, $this->indent, $this->wrap);
+        $spyc = new Spyc;
+        $spyc->setting_dump_force_quotes = true;
+        return $spyc->dump($content, $this->indent, $this->wrap);
     }
 }
